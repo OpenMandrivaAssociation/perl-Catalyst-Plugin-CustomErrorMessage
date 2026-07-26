@@ -1,15 +1,13 @@
 %define upstream_name    Catalyst-Plugin-CustomErrorMessage
-%define upstream_version 0.06
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.06
+Release:	7
 
 Summary:	Catalyst plugin to have more "cute" error message
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Catalyst-Plugin-CustomErrorMessage
-Source0:	https://cpan.metacpan.org/authors/id/J/JK/JKUTEJ/Catalyst-Plugin-CustomErrorMessage-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/J/JK/JKUTEJ/Catalyst-Plugin-CustomErrorMessage-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -29,7 +27,7 @@ You can use this module if you want to get rid of:
         (pl) Prosze sprobowac pozniej
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
